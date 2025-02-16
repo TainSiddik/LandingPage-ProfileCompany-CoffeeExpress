@@ -6,28 +6,62 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./output.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
 
 <body>
   <!-- navbar -->
-  <div
-    class="navbar px-4 md:px-20 w-full h-12 bg-yellow-900 flex justify-between items-center bg-opacity-90 top-0 z-50 sticky">
-    <div class="logo">
-      <a href="#hero" class="text-lg md:text-2xl text-orange-200 font-bold">Express <span
-          class="text-yellow-200">Coffee</span></a>
+  <div class="navbar  top-0 z-50 sticky">
+    <div class="desktop px-6 md:px-20 w-full h-12 bg-yellow-900 flex justify-between items-center bg-opacity-90">
+      <div class="logo">
+        <h1 class="text-lg md:text-2xl text-orange-200 font-bold">Express <span class="text-yellow-200">Coffee</span>
+        </h1>
+      </div>
+      <div class="nav hidden md:flex">
+        <ul class="flex gap-8 font-semibold text-white">
+          <li><a href="#hero" class="hero hover:text-orange-200">Home</a></li>
+          <li><a href="#products" class="product hover:text-orange-200">Products</a></li>
+          <li><a href="#about" class="about hover:text-orange-200">About</a></li>
+          <li><a href="#contact" class="contact hover:text-orange-200">Contact</a></li>
+        </ul>
+      </div>
+      <div class="btn flex md:hidden">
+        <button class="flex items-center" onclick="btnNav()">
+          <i class="fa-solid fa-bars text-orange-200 text-xl" id="icon"></i>
+        </button>
+      </div>
     </div>
-    <div class="nav hidden md:flex">
-      <ul class="flex gap-8 font-semibold text-white">
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#products">Products</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
+
+    <div
+      class="mobile bg-yellow-900 rounded-b-md w-16 bg-opacity-90 right-0 fixed translate-x-full transition-transform duration-300 ease-in-out"
+      id="mobileNav">
+      <ul class="text-white text-center grid gap-y-8 py-4">
+        <li>
+          <a href="#hero" class="mobileHero hover:text-orange-200">
+            <i class="fa-solid fa-house"></i>
+            <span class="text-xs block">Home</span>
+          </a>
+        </li>
+        <li>
+          <a href="#products" class="product hover:text-orange-200">
+            <i class="fa-solid fa-list"></i>
+            <span class="text-xs block">Product</span>
+          </a>
+        </li>
+        <li>
+          <a href="#about" class="about hover:text-orange-200">
+            <i class="fa-solid fa-address-card"></i>
+            <span class="text-xs block">About</span>
+          </a>
+        </li>
+        <li>
+          <a href="#contact" class="contact hover:text-orange-200"><i class="fa-solid fa-envelope"></i>
+            <span class="text-xs block">Contact</span>
+          </a>
+        </li>
       </ul>
     </div>
-    <div class="btn flex md:hidden">
-      <button class="flex items-center">
-        <i class="fa-solid fa-bars text-orange-200 text-xl"></i>
-      </button>
-    </div>
+
   </div>
   <!-- end of navbar -->
 
@@ -71,46 +105,129 @@
 
           <div
             class="product grid grid-cols-2 place-items-center md:grid-cols-3 lg:grid-cols-5 gap-x-4 gap-y-8 md:gap-y-24">
-            <div class="gambar">
-              <img src="./img/coffee.png" alt=""
-                class="w-16 h-16 md:w-24 md:h-24 lg:w-24 lg:h-36 hover:scale-125 transition-transform duration-300 ease-in-out">
+            <div class="product1">
+              <div class="card text-white hover:scale-110 transition-transform duration-300 ease-in-out">
+                <div
+                  class="w-28 px-2 pb-2 md:w-36 xl:w-48 ring-2 ring-orange-200 bg-orange-900 bg-opacity-50 rounded-md">
+                  <div class="img">
+                    <img src="./img/coffee.png" alt="">
+                  </div>
+                  <div class="title text-center">
+                    <h3 class="font-semibold text-orange-200">Produk 1</h3>
+                    <p class="text-xs md:text-sm pt-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio,
+                      quidem!</p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="gambar">
-              <img src="./img/coffee.png" alt=""
-                class="w-16 h-16 md:w-24 md:h-24 lg:w-24 lg:h-36 hover:scale-125 transition-transform duration-300 ease-in-out">
+
+            <div class="product1">
+              <div class="card text-white hover:scale-110 transition-transform duration-300 ease-in-out">
+                <div
+                  class="w-28 px-2 pb-2 md:w-36 xl:w-48 ring-2 ring-orange-200 bg-orange-900 bg-opacity-50 rounded-md">
+                  <div class="img">
+                    <img src="./img/coffee.png" alt="">
+                  </div>
+                  <div class="title text-center">
+                    <h3 class="font-semibold text-orange-200">Produk 1</h3>
+                    <p class="text-xs md:text-sm pt-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio,
+                      quidem!</p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="gambar">
-              <img src="./img/coffee.png" alt=""
-                class="w-16 h-16 md:w-24 md:h-24 lg:w-24 lg:h-36 hover:scale-125 transition-transform duration-300 ease-in-out">
+
+            <div class="product2">
+              <div class="card text-white hover:scale-110 transition-transform duration-300 ease-in-out">
+                <div
+                  class="w-28 px-2 pb-2 md:w-36 xl:w-48 ring-2 ring-orange-200 bg-orange-900 bg-opacity-50 rounded-md">
+                  <div class="img">
+                    <img src="./img/coffee.png" alt="">
+                  </div>
+                  <div class="title text-center">
+                    <h3 class="font-semibold text-orange-200">Produk 2</h3>
+                    <p class="text-xs md:text-sm pt-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio,
+                      quidem!</p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="gambar">
-              <img src="./img/coffee.png" alt=""
-                class="w-16 h-16 md:w-24 md:h-24 lg:w-24 lg:h-36 hover:scale-125 transition-transform duration-300 ease-in-out">
+            <div class="product3">
+              <div class="card text-white hover:scale-110 transition-transform duration-300 ease-in-out">
+                <div
+                  class="w-28 px-2 pb-2 md:w-36 xl:w-48 ring-2 ring-orange-200 bg-orange-900 bg-opacity-50 rounded-md">
+                  <div class="img">
+                    <img src="./img/coffee.png" alt="">
+                  </div>
+                  <div class="title text-center">
+                    <h3 class="font-semibold text-orange-200">Produk 3</h3>
+                    <p class="text-xs md:text-sm pt-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio,
+                      quidem!</p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="gambar">
-              <img src="./img/coffee.png" alt=""
-                class="w-16 h-16 md:w-24 md:h-24 lg:w-24 lg:h-36 hover:scale-125 transition-transform duration-300 ease-in-out">
+            <div class="product4">
+              <div class="card text-white hover:scale-110 transition-transform duration-300 ease-in-out">
+                <div
+                  class="w-28 px-2 pb-2 md:w-36 xl:w-48 ring-2 ring-orange-200 bg-orange-900 bg-opacity-50 rounded-md">
+                  <div class="img">
+                    <img src="./img/coffee.png" alt="">
+                  </div>
+                  <div class="title text-center">
+                    <h3 class="font-semibold text-orange-200">Produk 4</h3>
+                    <p class="text-xs md:text-sm pt-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio,
+                      quidem!</p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="gambar">
-              <img src="./img/coffee.png" alt=""
-                class="w-16 h-16 md:w-24 md:h-24 lg:w-24 lg:h-36 hover:scale-125 transition-transform duration-300 ease-in-out">
+            <div class="5">
+              <div class="card text-white hover:scale-110 transition-transform duration-300 ease-in-out">
+                <div
+                  class="w-28 px-2 pb-2 md:w-36 xl:w-48 ring-2 ring-orange-200 bg-orange-900 bg-opacity-50 rounded-md">
+                  <div class="img">
+                    <img src="./img/coffee.png" alt="">
+                  </div>
+                  <div class="title text-center">
+                    <h3 class="font-semibold text-orange-200">Produk 5</h3>
+                    <p class="text-xs md:text-sm pt-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio,
+                      quidem!</p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="gambar">
-              <img src="./img/coffee.png" alt=""
-                class="w-16 h-16 md:w-24 md:h-24 lg:w-24 lg:h-36 hover:scale-125 transition-transform duration-300 ease-in-out">
+            <div class="product6">
+              <div class="card text-white hover:scale-110 transition-transform duration-300 ease-in-out">
+                <div
+                  class="w-28 px-2 pb-2 md:w-36 xl:w-48 ring-2 ring-orange-200 bg-orange-900 bg-opacity-50 rounded-md">
+                  <div class="img">
+                    <img src="./img/coffee.png" alt="">
+                  </div>
+                  <div class="title text-center">
+                    <h3 class="font-semibold text-orange-200">Produk 6</h3>
+                    <p class="text-xs md:text-sm pt-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio,
+                      quidem!</p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="gambar">
-              <img src="./img/coffee.png" alt=""
-                class="w-16 h-16 md:w-24 md:h-24 lg:w-24 lg:h-36 hover:scale-125 transition-transform duration-300 ease-in-out">
+            <div class="product7">
+              <div class="card text-white hover:scale-110 transition-transform duration-300 ease-in-out">
+                <div
+                  class="w-28 px-2 pb-2 md:w-36 xl:w-48 ring-2 ring-orange-200 bg-orange-900 bg-opacity-50 rounded-md">
+                  <div class="img">
+                    <img src="./img/coffee.png" alt="">
+                  </div>
+                  <div class="title text-center">
+                    <h3 class="font-semibold text-orange-200">Produk 7</h3>
+                    <p class="text-xs md:text-sm pt-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio,
+                      quidem!</p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="gambar">
-              <img src="./img/coffee.png" alt=""
-                class="w-16 h-16 md:w-24 md:h-24 lg:w-24 lg:h-36 hover:scale-125 transition-transform duration-300 ease-in-out">
-            </div>
-            <div class="gambar">
-              <img src="./img/coffee.png" alt=""
-                class="w-16 h-16 md:w-24 md:h-24 lg:w-24 lg:h-36 hover:scale-125 transition-transform duration-300 ease-in-out">
-            </div>
+
           </div>
         </div>
       </section>
@@ -186,16 +303,19 @@
 
   <!-- footer -->
   <div class="bg-amber-800 py-4">
-    <div class="main w-full lg:w-[1200px] h-4 mx-auto flex gap-4 justify-between items-center px-2" id="footer">
+    <div class="main w-full lg:w-[1200px] mx-auto flex gap-4 justify-between items-center px-2" id="footer">
       <div class="caffee text-white">
-        <h1 class="text-sm">© 2025 Coffee Express. All rights reserved. V.1.0</h1>
+        <h1 class="text-xs md:text-sm lg:text-md">© 2025 Coffee Express. All rights reserved. V.1.0</h1>
       </div>
       <div class="developer">
-        <a href="#" class="text-sm md:text-lg font-semibold text-white">Website Developer</a>
+        <h1 class="text-xs md:text-sm lg:text-md font-semibold text-white">Website Developer</h1>
+        <a href="https://github.com/TainSiddik" target="_blank"><i
+            class="fa-brands fa-github text-white hover:text-orange-200"></i></a>
       </div>
     </div>
   </div>
   <!-- end of footer -->
+
 
   <script src="./script.js"></script>
 </body>
